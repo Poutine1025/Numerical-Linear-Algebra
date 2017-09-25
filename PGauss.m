@@ -1,10 +1,10 @@
 function [X,u]=GaussColumn(A,n)
-%������ԪGauss��ȥ������A��LU�ֽ�
-%AΪϵ������nΪA�Ľ��������XΪ�ֽ�
+%用列主元Gauss消去法计算A的LU分解
+%A为系数矩阵，n为A的阶数，输出X为分解
 
-L=0;           %��¼��Ԫ���ڵ�����
-M=0;           %��¼����Ԫ
-u=zeros(n-1,1);%��¼�û�����
+L=0;           %记录主元所在的行数
+M=0;           %记录列主元
+u=zeros(n-1,1);%记录置换矩阵
 for k=1:n-1
     L=k;
     M=A(k,k);
