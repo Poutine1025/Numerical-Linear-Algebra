@@ -2,9 +2,9 @@ function [X,u]=PGauss(A,n)
 %用列主元Gauss消去法计算A的LU分解
 %A为系数矩阵，n为A的阶数，输出X为分解
 
-L=0;            %记录主元所在的行数
-M=0;            %记录列主元
-u=zeros(n-1,1); %记录置换矩阵
+L=0;            
+M=0;            
+u=zeros(n-1,1);
 for k=1:n-1
     L=k;
     M=A(k,k);
